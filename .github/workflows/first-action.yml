@@ -1,0 +1,21 @@
+# creating a work flow 
+
+name: First Workflow
+
+# defininig the event that will trigger this workflow 
+# workflow discpatch makes sure we can manually trigger he workflow 
+on: workflow_dispatch
+
+# this must be jobs and not job
+jobs: 
+  firstjob:
+    # here we define the deetails of this job we created called firstjob
+    # you can find some runners you can use on github  : https://docs.github.com/en/actions/concepts/runners/github-hosted-runners
+    runs-on: ubuntu-latest
+    steps:
+      # we add a list of steps 
+      - name: print greeting 
+        run: echo "Hello world"
+      - name: goodbye
+        run: echo "goodbye"
+      
